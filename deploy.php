@@ -55,6 +55,7 @@ task('deploy', [
     'deploy:vendors',
     'deploy:writable',
     'artisan:storage:link', // |
+    'artisan:key:generate',
     'artisan:view:cache',   // |
     'artisan:config:cache', // | Laravel specific steps
     'artisan:queue:restart', // | 
