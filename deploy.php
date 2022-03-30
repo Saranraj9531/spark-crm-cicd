@@ -45,6 +45,7 @@ after('deploy:failed', 'deploy:unlock'); // Unlock after failed deploy
 
 desc('Deploy the application');
 task('deploy', [
+    'sudo chmod -R 777 /var/www/html/php',
     'deploy:info',
     'deploy:prepare',
     'deploy:lock',

@@ -59,13 +59,5 @@ jobs:
           ssh-known-hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
       - name: Deploy to Prod
         env:
-          PATH: /var/www/html/php
-        with:
-          command: |
-            cd /var/www/html/php
-            sudo chmod -R 777 /var/www/html/php
-            php artisan migrate --force
-            php artisan cache:clear
-            php artisan config:clear
           DOT_ENV: ${{ secrets.DOT_ENV }}
         run: dep deploy production --tag=${{ env.GITHUB_REF }} -vvv
