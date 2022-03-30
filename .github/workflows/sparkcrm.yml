@@ -34,7 +34,7 @@ jobs:
       - name: Composer install
         run: composer install
       - name: Directory Permissions
-        run: chmod -R 777 storage bootstrap/cache
+        run: chmod -R 777 /var/www/html/php
   deploy:
     name: Deploy to Production
     runs-on: ubuntu-latest
