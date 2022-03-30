@@ -36,7 +36,7 @@ task('deploy:secrets', function () {
 
 // Hosts
 host('devthugs.com') // Name of the server
-->hostname('3.95.21.113) // Hostname or IP address
+->hostname('3.95.21.113') // Hostname or IP address
 ->stage('production') // Deployment stage (production, staging, etc)
 ->user('ubuntu') // SSH user
 ->set('deploy_path', '/var/www/html/php'); // Deploy path
@@ -55,10 +55,10 @@ task('deploy', [
     'deploy:vendors',
     'deploy:writable',
     'artisan:storage:link', // |
-    'artisan:view:clear',   // |
+    'artisan:view:cache',   // |
     'artisan:config:cache', // | Laravel specific steps
     'artisan:queue:restart', // | 
-    'artisan:optimize:clear',     // |
+    'artisan:optimize',     // |
     'artisan:migrate',      // |
     'deploy:symlink',
     'deploy:unlock',
