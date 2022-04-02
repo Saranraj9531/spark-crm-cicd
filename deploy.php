@@ -39,7 +39,7 @@ host('3.95.21.113') // Name of the server
 ->hostname('3.95.21.113') // Hostname or IP address
 ->stage('production') // Deployment stage (production, staging, etc)
 ->user('ubuntu') // SSH user
-->set('deploy_path', '/var/www/html/php'); // Deploy path
+->set('deploy_path', '/var/www/html/crm'); // Deploy path
 
 after('deploy:failed', 'deploy:unlock'); // Unlock after failed deploy
 
