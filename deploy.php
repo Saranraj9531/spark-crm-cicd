@@ -59,7 +59,7 @@ task('deploy', [
     'artisan:config:cache', // | Laravel specific steps
     'artisan:queue:restart', // | 
     'artisan:optimize:clear',     // |
-    'artisan:migrate',      // |
+    // 'artisan:migrate',      // |
     'deploy:symlink',
     'deploy:unlock',
     'cleanup',
