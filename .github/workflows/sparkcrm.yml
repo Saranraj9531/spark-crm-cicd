@@ -31,7 +31,7 @@ jobs:
         with:
           php-version: 7.3 # Use your PHP version
           extensions: mbstring, bcmath # Setup any required extensions for tests
-      - name: Composer install
+      - name: Composer instal
         run: composer install
   deploy:
     name: Deploy to Production
